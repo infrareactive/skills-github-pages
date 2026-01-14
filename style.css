@@ -1,0 +1,141 @@
+/* --- Base Variables & Theme --- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --accent-red: #ff4d4d;
+    --card-bg: #f6f8fa;
+    --border-color: #d0d7de;
+    --transition-speed: 0.3s;
+}
+
+/* Infrared Theme (Dark Mode) */
+[data-theme="dark"] {
+    --bg-color: #000000;
+    --text-color: #ff0000; /* Pure Infrared Red */
+    --accent-red: #800000;
+    --card-bg: #1a0000;
+    --border-color: #4d0000;
+}
+
+/* --- General Layout --- */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.counter-box {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* --- Components --- */
+button {
+    padding: 12px 24px;
+    cursor: pointer;
+    border: 2px solid var(--text-color);
+    background: transparent;
+    color: var(--text-color);
+    font-family: inherit;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all var(--transition-speed);
+}
+
+button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Reactive States --- */
+.reactive {
+    background-color: var(--text-color) !important;
+    color: var(--bg-color) !important;
+    box-shadow: 0 0 25px var(--text-color);
+    transform: scale(1.05);
+    border-color: var(--text-color);
+}
+
+/* Admin Zone Warning */
+.warning-box {
+    border: 2px dashed #ff0000;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+/* Specific Danger Button */
+.danger {
+    color: #ff0000;
+    border-color: #ff0000;
+    margin-top: 10px;
+}
+
+.danger:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+/* --- Logs Table --- */
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: var(--card-bg);
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--border-color);
+    color: var(--bg-color);
+}
+
+/* Infrared Pulsing Animation (Triggers when target reached) */
+@keyframes infraredPulse {
+    0% { box-shadow: 0 0 5px #ff0000; }
+    50% { box-shadow: 0 0 20px #ff0000; }
+    100% { box-shadow: 0 0 5px #ff0000; }
+}
+
+[data-theme="dark"] .warning-box {
+    animation: infraredPulse 2s infinite ease-in-out;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
