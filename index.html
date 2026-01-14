@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfraReactive Project - Master System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button id="theme-toggle">Switch to Infrared</button>
+        <div class="counter-box">
+            System Logs: <span id="contact-counter">0</span> / <span id="target-value">5</span>
+        </div>
+    </header>
+
+    <main>
+        <h1>InfraReactive Dashboard</h1>
+        
+        <section id="contact-section">
+            <button id="contact-btn">Contact Me</button>
+            
+            <div id="contact-form" class="hidden">
+                <input type="email" id="user-email" placeholder="Enter security email">
+                <button id="submit-btn">Submit Info</button>
+            </div>
+        </section>
+
+        <section id="admin-zone" class="hidden">
+            <div class="warning-box">
+                <p>⚠️ TARGET REACHED: Infrared Overload Detected.</p>
+                <button id="reset-btn" class="danger">FULL SYSTEM RESET</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="logs-section">
+            <div class="log-header">
+                <h2>System Activity Logs</h2>
+                <button id="export-btn">Export to CSV</button>
+            </div>
+            <table id="logs-table">
+                <thead>
+                    <tr>
+                        <th>Event ID</th>
+                        <th>Timestamp</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="logs-body">
+                    </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
