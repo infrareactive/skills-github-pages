@@ -1,0 +1,33 @@
+# Site Settings
+title: InfraReactive Dashboard
+description: High-tech infrared reactive interface for system monitoring.
+baseurl: "/skills-github-pages"
+url: "https://infrareactive.github.io"
+
+# Brand Information
+author:
+  name: Infrareactive
+  email: 
+
+# Social Media Preview Settings
+twitter:
+  username: infrareactive
+  card: summary_large_image
+
+# Metadata & Assets
+logo: /assets/images/logo.png
+image: https://cdna.artstation.com/p/assets/images/images/056/733/140/large/jb-latorre-earth-angel-00-z-oil-72-small.jpg?1669952176
+
+# Build Settings
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+exclude: 
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - .sass-cache/
+  - .jekyll-cache/
