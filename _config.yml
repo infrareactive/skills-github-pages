@@ -19,7 +19,7 @@ logo: /assets/images/logo.png
 image: https://cdna.artstation.com/p/assets/images/images/056/733/140/large/jb-latorre-earth-angel-00-z-oil-72-small.jpg?1669952176
 
 # Build Settings
-theme: jekyll-theme-cayman
+theme: minima
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
@@ -31,3 +31,4 @@ exclude:
   - node_modules/
   - .sass-cache/
   - .jekyll-cache/
+
